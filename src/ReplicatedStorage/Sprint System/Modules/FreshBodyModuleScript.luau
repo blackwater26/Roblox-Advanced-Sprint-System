@@ -12,15 +12,15 @@ local Players = game:GetService("Players")
 local Config = require(script.Parent.Parent.ConfigModule)
 
 --// Get SprintGui with timeout
-local SprintGui = Players.LocalPlayer.PlayerGui:WaitForChild("SprintGui", Config.GUI.GUI_WAIT_TIMEOUT)
+local SprintGui = Players.LocalPlayer.PlayerGui:WaitForChild(Config.Elements.SPRINT_GUI, Config.GUI.GUI_WAIT_TIMEOUT)
 if not SprintGui then
-	warn("SprintGui not found - GUI disabled")
+	warn(Config.Elements.SPRINT_GUI .. " not found - GUI disabled")
 	return { Initialize = function() end, Cleanup = function() end }
 end
 
 --// GUI Elements
-local Background = SprintGui:WaitForChild("Background")
-local SprintBody = Background:WaitForChild("Body")
+local Background = SprintGui:WaitForChild(Config.Elements.BACKGROUND)
+local SprintBody = Background:WaitForChild(Config.Elements.BODY)
 
 --// Bar padding from config
 local sidePadding = Config.Bar.SIDE_PADDING

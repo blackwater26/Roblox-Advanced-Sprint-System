@@ -33,6 +33,13 @@ Config.Bar = {
     TOP_BOTTOM_PADDING = 3,            -- Top/bottom padding (pixels)
 }
 
+--// GUI Element Names
+Config.Elements = {
+    SPRINT_GUI = "SprintGui",          -- ScreenGui name
+    BACKGROUND = "Background",         -- Background frame name
+    BODY = "Body",                     -- Stamina bar frame name
+}
+
 --// Server
 Config.Server = {
     CHARACTER_LOAD_DELAY = 0.1,        -- Delay after spawn (seconds)
