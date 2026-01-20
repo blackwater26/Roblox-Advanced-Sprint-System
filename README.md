@@ -211,3 +211,20 @@ Why Client-Side?
 - Scalable for large or narrative-driven projects
 
 ---
+📬 Contact & Work Inquiries
+---
+
+If you are interested in using, customizing, or extending this sprint
+system or other core gameplay mechanics for your project, feel free to
+reach out.
+
+I am available for:
+- Custom core mechanic development
+- System integration & optimization
+- Gameplay and movement mechanics
+
+Discord:
+➡️ YOUR_DISCORD_NAME#0000
+
+Please include a brief description of your project when contacting.
+---
