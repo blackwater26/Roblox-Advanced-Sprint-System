@@ -93,6 +93,7 @@ by other scripts.
 
 Structure:
 
+```text
 ReplicatedStorage
 └── Modules
  ├── CalculatingOfWSModuleScript.luau
