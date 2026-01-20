@@ -1,6 +1,10 @@
 # Sprint System – Modular & Event-Driven
 
-
+[![License: MPL 2.0](https://img.shields.io/badge/License-MPL_2.0-blue.svg)](https://opensource.org/licenses/MPL-2.0)
+[![Lua](https://img.shields.io/badge/Language-Lua-blueviolet.svg)](https://www.lua.org/)
+[![GitHub stars](https://img.shields.io/github/stars/blackwater26/Roblox-Full-Configurable-Advanced-Sprint-System?style=social)](https://github.com/blackwater26/Roblox-Full-Configurable-Advanced-Sprint-System/stargazers)
+[![GitHub forks](https://img.shields.io/github/forks/blackwater26/Roblox-Full-Configurable-Advanced-Sprint-System?style=social)](https://github.com/blackwater26/Roblox-Full-Configurable-Advanced-Sprint-System/network/members)
+[![Roblox](https://img.shields.io/badge/Made%20for-Roblox-red.svg?logo=roblox&logoColor=white)](https://www.roblox.com/)
 
 This sprint system is built with scalability, clarity, and production use in mind.
 Rather than being a simple input-to-speed toggle, the system is designed as a decoupled architecture
@@ -95,6 +99,7 @@ by other scripts.
 
 Structure:
 
+```text
 ReplicatedStorage
 └── Modules
  ├── CalculatingOfWSModuleScript.luau
@@ -108,13 +113,16 @@ ReplicatedStorage
  │ or respawns to ensure a clean state.
  │
  └── InputModuleScript.luau
+```
 
 - ModuleScript
 - Handles input logic (Shift, Ctrl, etc.)
 - Fires sprint-related signals without directly changing speed.
 
+```text
 ReplicatedStorage
 └── ConfigModule.luau
+```
 
 - ModuleScript
 - Centralized configuration file.
@@ -132,9 +140,11 @@ and desynchronization.
 
 Structure:
 
+```text
 ServerScriptService
 └── Sprint System
  └── SprintServer.luau
+```
 
 - Script (RunContext: Server)
 - Listens for sprint requests coming from the client.
@@ -156,9 +166,11 @@ the game.
 
 Structure:
 
+```text
 StarterPlayer
 └── StarterPlayerScripts
  └── main.luau
+```
 
 - LocalScript
 - Acts as the client-side controller.
@@ -192,3 +204,5 @@ Why Client-Side?
 - Server-authoritative movement
 - Easy configuration via a single config module
 - Scalable for large or narrative-driven projects
+
+---
