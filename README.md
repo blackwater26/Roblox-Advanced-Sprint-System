@@ -1,5 +1,11 @@
 # Sprint System – Modular & Event-Driven
 
+[![License: MPL 2.0](https://img.shields.io/badge/License-MPL_2.0-blue.svg)](https://opensource.org/licenses/MPL-2.0)
+[![Lua](https://img.shields.io/badge/Language-Lua-blueviolet.svg)](https://www.lua.org/)
+[![GitHub stars](https://img.shields.io/github/stars/blackwater26/Roblox-Full-Configurable-Advanced-Sprint-System?style=social)](https://github.com/blackwater26/Roblox-Full-Configurable-Advanced-Sprint-System/stargazers)
+[![GitHub forks](https://img.shields.io/github/forks/blackwater26/Roblox-Full-Configurable-Advanced-Sprint-System?style=social)](https://github.com/blackwater26/Roblox-Full-Configurable-Advanced-Sprint-System/network/members)
+[![Roblox](https://img.shields.io/badge/Made%20for-Roblox-red.svg?logo=roblox&logoColor=white)](https://www.roblox.com/)
+
 This sprint system is built with scalability, clarity, and production use in mind.
 Rather than being a simple input-to-speed toggle, the system is designed as a decoupled architecture
 where input, state, and behavior are isolated and communicate through signals.
