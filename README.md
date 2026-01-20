@@ -15,6 +15,16 @@ without requiring rewrites to existing logic.
 
 ---
 
+# ⚠️ Requires Knit Framework
+
+This system depends on Knit for client-server communication.
+Make sure Knit is installed and set up before use.
+
+### Knit Repository:
+  https://github.com/Sleitnick/Knit
+
+---
+
 ## Architecture Overview
 
 The system is split into clear responsibilities:
