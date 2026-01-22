@@ -115,7 +115,7 @@ scalability, and clean code organization.
 
 ---
 
-## 📁 1. ReplicatedStorage (Shared Modules)
+## 1. ReplicatedStorage (Shared Modules)
 
 Files inside ReplicatedStorage are accessible by both the Server and
 Client. These modules do not run on their own and must be required
@@ -156,7 +156,7 @@ ReplicatedStorage
 
 ---
 
-## 🛡️ 2. ServerScriptService (Server-Side Logic)
+## 2. ServerScriptService (Server-Side Logic)
 
 Scripts here run only on the server. This layer is responsible for
 authoritative changes to player movement to prevent exploits
@@ -183,7 +183,7 @@ Why Server-Side?
 
 ---
 
-## 💻 3. StarterPlayerScripts (Client-Side Logic)
+## 3. StarterPlayerScripts (Client-Side Logic)
 
 Scripts placed here are cloned to each player's client when they join
 the game.
@@ -210,7 +210,7 @@ Why Client-Side?
 
 ---
 
-### 🛠️ Installation Summary
+### Installation Summary
 
 | File / Folder Name | Type         | Location             |
 | ------------------ | ------------ | -------------------- |
@@ -221,7 +221,7 @@ Why Client-Side?
 
 ---
 
-### ✅ Design Goals
+### Design Goals
 
 - Fully modular architecture
 - Clear separation of responsibilities
