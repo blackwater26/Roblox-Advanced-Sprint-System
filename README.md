@@ -242,10 +242,10 @@ Please include a brief description of your project when contacting.
 
 # 🗺️ Road Map
 
-v1.1.0 -> Adopting 'React' as the primary UI library to ensure scalability.
+v1.1.0 -> Adopting 'React' as the primary UI library to ensure scalability. [🚧 In Progress]
 
-v1.1.5 -> Integrating listenable audio events for a better user experience and deeper customization.
+v1.1.5 -> Integrating listenable audio events for a better user experience and deeper customization. [🔜 Planned]
 
-v1.2.0 -> Adding configurable visual effects and more event-driven triggers.
+v1.2.0 -> Adding configurable visual effects and more event-driven triggers. [🔜 Planned]
 
 ---
