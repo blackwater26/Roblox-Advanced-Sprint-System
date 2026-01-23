@@ -246,4 +246,11 @@ Discord:
 ➡️ blackw_26
 
 Please include a brief description of your project when contacting.
+
+---
+
+# 🗺️ Road Map
+
+v1.0.5 -> Adopting 'React' as the primary UI library to ensure scalability.
+
 ---
