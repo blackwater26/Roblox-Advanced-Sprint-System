@@ -1,0 +1,15 @@
+# Project place file
+/Rojo.rbxlx
+
+# Roblox Studio lock files
+/*.rbxlx.lock
+/*.rbxl.lock
+
+.aftman/
+.rojo/
+Packages/
+*.lock
+*.rbxl
+*.rbxlx
+
+sourcemap.json
