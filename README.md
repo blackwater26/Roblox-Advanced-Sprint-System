@@ -88,135 +88,57 @@ You are free to use and integrate this system into your projects, provided that 
 is preserved and modifications to the original source files remain open under the same license.
 
 
-
-
 ---
 
 
+# 🏃 Sprint System – Purpose & Architecture Overview
 
-# 🏃 Sprint System – Setup & Architecture Guide
-
-This sprint system is built with a layered architecture that separates
-input handling (Client) and movement authority (Server) for security,
-scalability, and clean code organization.
+This sprint system is designed to be **modular, secure, and scalable**, allowing developers to integrate advanced sprint mechanics into their Roblox games without worrying about exploits or messy code.
 
 ---
 
-## 1. ReplicatedStorage (Shared Modules)
+## Core Goals
 
-Files inside ReplicatedStorage are accessible by both the Server and
-Client. These modules do not run on their own and must be required
-by other scripts.
+1. **Separation of Concerns**  
+   - Input handling, movement logic, and configuration are clearly separated.  
+   - Client handles input and intent, server handles authoritative movement.
 
-Structure:
+2. **Security & Server Authority**  
+   - Movement changes are applied only on the server to prevent speed hacks.  
+   - Ensures all players see consistent sprint behavior.
 
-```text
-ReplicatedStorage
-└── Modules
- ├── CalculatingOfWSModuleScript.luau
- │ - ModuleScript
- │ - Responsible for all movement speed calculations
- │ (walking speed, sprint speed, smoothing, stamina logic).
- │
- ├── FreshBodyModuleScript.luau
- │ - ModuleScript
- │ - Resets character-related properties when the player dies
- │ or respawns to ensure a clean state.
- │
- └── InputModuleScript.luau
-```
+3. **Modularity & Scalability**  
+   - Each module has a specific responsibility.  
+   - Easy to extend or replace functionality (stamina, sprint effects, custom triggers).  
+   - Configurable through a single central module.
 
-- ModuleScript
-- Handles input logic (Shift, Ctrl, etc.)
-- Fires sprint-related signals without directly changing speed.
+4. **Responsive Input Handling**  
+   - Player input is captured immediately on the client.  
+   - Signals are sent to the server, keeping gameplay smooth without polling.  
 
-```text
-ReplicatedStorage
-└── ConfigModule.luau
-```
+5. **Clean & Maintainable Code**  
+   - Code is structured for readability and reusability.  
+   - Minimal coupling between modules makes upgrades or fixes faster.  
 
-- ModuleScript
-- Centralized configuration file.
-- Controls values such as sprint speed, stamina limits,
-  drain/recovery rates, and tuning variables.
-- Allows global behavior changes without touching core logic.
+6. **Customizability**  
+   - Developers can easily tune sprint speed, stamina drain, recovery rates, and other parameters without touching core logic.  
+   - Audio and visual feedback can be added without changing the movement logic.
+
+7. **Robust Player Experience**  
+   - Resets player properties on respawn to ensure clean behavior.  
+   - Supports multiple players simultaneously with consistent mechanics.
 
 ---
 
-## 2. ServerScriptService (Server-Side Logic)
+## Why This Architecture Matters
 
-Scripts here run only on the server. This layer is responsible for
-authoritative changes to player movement to prevent exploits
-and desynchronization.
-
-Structure:
-
-```text
-ServerScriptService
-└── Sprint System
- └── SprintServer.luau
-```
-
-- Script (RunContext: Server)
-- Listens for sprint requests coming from the client.
-- Applies the actual WalkSpeed changes on the server.
-- Ensures all players see consistent movement behavior.
-
-Why Server-Side?
-
-- Prevents client-side speed hacking.
-- Ensures replication consistency.
-- Keeps movement logic authoritative and secure.
+- Promotes **professional development practices** on Roblox.  
+- Ensures **player trust**, as speed changes cannot be exploited.  
+- Simplifies **future updates and feature expansion**.  
+- Provides a **foundation** for adding advanced features like sprint animations, stamina UI, or event-driven effects.
 
 ---
 
-## 3. StarterPlayerScripts (Client-Side Logic)
-
-Scripts placed here are cloned to each player's client when they join
-the game.
-
-Structure:
-
-```text
-StarterPlayer
-└── StarterPlayerScripts
- └── main.luau
-```
-
-- LocalScript
-- Acts as the client-side controller.
-- Listens to player input (e.g. Shift key).
-- Communicates sprint intent to the server.
-- Does NOT directly modify movement speed.
-
-Why Client-Side?
-
-- Instantly captures user input.
-- Keeps input handling responsive.
-- Avoids unnecessary server polling.
-
----
-
-### Installation Summary
-
-| File / Folder Name | Type         | Location             |
-| ------------------ | ------------ | -------------------- |
-| main.luau          | LocalScript  | StarterPlayerScripts |
-| SprintServer.luau  | Script       | ServerScriptService  |
-| Modules (Folder)   | Folder       | ReplicatedStorage    |
-| ConfigModule.luau  | ModuleScript | ReplicatedStorage    |
-
----
-
-### Design Goals
-
-- Fully modular architecture
-- Clear separation of responsibilities
-- Server-authoritative movement
-- Easy configuration via a single config module
-- Scalable for large or narrative-driven projects
-
----
 📬 Contact & Work Inquiries
 ---
 
