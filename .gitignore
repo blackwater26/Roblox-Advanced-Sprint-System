@@ -1,7 +1,14 @@
 # Project place file
 /Rojo.rbxlx
 
-# Roblox Build Files
+# Roblox Studio lock files
+/*.rbxlx.lock
+/*.rbxl.lock
+
+.aftman/
+.rojo/
+Packages/
+*.lock
 *.rbxl
 *.rbxlx
 *.rbxm
