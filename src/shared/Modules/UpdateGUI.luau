@@ -7,9 +7,10 @@
 local RunService = game:GetService("RunService")
 local TweenService = game:GetService("TweenService")
 local Players = game:GetService("Players")
+local ReplicatedStorage = game:GetService("ReplicatedStorage")
 
 --// Modules
-local Config = require(script.Parent.Parent.ConfigModule)
+local Config = require(ReplicatedStorage.Shared.ConfigModule)
 
 --// Get SprintGui with timeout
 local SprintGui = Players.LocalPlayer.PlayerGui:WaitForChild(Config.Elements.SPRINT_GUI, Config.GUI.GUI_WAIT_TIMEOUT)
@@ -19,8 +20,8 @@ if not SprintGui then
 end
 
 --// GUI Elements
-local Background = SprintGui:WaitForChild(Config.Elements.BACKGROUND)
-local SprintBody = Background:WaitForChild(Config.Elements.BODY)
+local Background = Config.Elements.BACKGROUND and SprintGui:WaitForChild(Config.Elements.BACKGROUND)
+local SprintBody = Config.Elements.BODY and SprintGui:WaitForChild(Config.Elements.BODY)
 
 --// Bar padding from config
 local sidePadding = Config.Bar.SIDE_PADDING
@@ -31,11 +32,8 @@ SprintBody.AnchorPoint = Config.Bar.ANCHOR_POINT
 SprintBody.Position = UDim2.new(0, sidePadding, Config.Bar.POSITION_Y, 0)
 
 --// Tween settings
-local tweenInfo = TweenInfo.new(
-	Config.GUI.TWEEN_DURATION,
-	Config.GUI.TWEEN_EASING_STYLE,
-	Config.GUI.TWEEN_EASING_DIRECTION
-)
+local tweenInfo =
+	TweenInfo.new(Config.GUI.TWEEN_DURATION, Config.GUI.TWEEN_EASING_STYLE, Config.GUI.TWEEN_EASING_DIRECTION)
 
 --// State
 local BodyMover = {}
@@ -45,31 +43,33 @@ local maxBodyWidth = nil
 
 --// Update bar width based on durability
 local function updateBar()
-	if not sprintSystemInstance then return end
-	
+	if not sprintSystemInstance then
+		return
+	end
+
 	-- Cache max width on first run
 	if not maxBodyWidth then
 		maxBodyWidth = Background.AbsoluteSize.X - (sidePadding * 2)
 	end
-	
+
 	local percent = sprintSystemInstance.currentDurability / sprintSystemInstance.DURABILITY_MAX
 	SprintBody.Size = UDim2.new(0, maxBodyWidth * percent, 1, -topBottomPadding * 2)
 end
 
 --// Fade out background
 local function hideGUI()
-	TweenService:Create(Background, tweenInfo, {BackgroundTransparency = Config.Bar.TRANSPARENCY_HIDDEN}):Play()
+	TweenService:Create(Background, tweenInfo, { BackgroundTransparency = Config.Bar.TRANSPARENCY_HIDDEN }):Play()
 end
 
 --// Fade in background
 local function showGUI()
-	TweenService:Create(Background, tweenInfo, {BackgroundTransparency = Config.Bar.TRANSPARENCY_VISIBLE}):Play()
+	TweenService:Create(Background, tweenInfo, { BackgroundTransparency = Config.Bar.TRANSPARENCY_VISIBLE }):Play()
 end
 
 --// Initialize with sprint system reference
 function BodyMover:Initialize(sprintSystem)
 	sprintSystemInstance = sprintSystem
-	
+
 	-- Toggle GUI visibility on sprint state change
 	sprintSystem.SprintChanged.Event:Connect(function()
 		if sprintSystem.isSprinting then
@@ -78,7 +78,7 @@ function BodyMover:Initialize(sprintSystem)
 			hideGUI()
 		end
 	end)
-	
+
 	-- Update bar every frame
 	heartbeatConnection = RunService.Heartbeat:Connect(updateBar)
 end

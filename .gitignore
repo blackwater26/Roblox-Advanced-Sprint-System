@@ -1,15 +1,61 @@
 # Project place file
 /Rojo.rbxlx
 
-# Roblox Studio lock files
-/*.rbxlx.lock
-/*.rbxl.lock
-
-.aftman/
-.rojo/
-Packages/
-*.lock
+# Roblox Build Files
 *.rbxl
 *.rbxlx
+*.rbxm
+*.rbxmx
+*.mesh
 
+# Roblox Studio Lock Files
+*.rbxlx.lock
+*.rbxl.lock
+
+# Rojo Generated Files
 sourcemap.json
+.rojo/
+
+# Wally Package Manager
+Packages/
+wally.lock
+
+# Aftman Tool Manager
+.aftman/
+aftman.lock
+
+# Build/Release Outputs
+Release/
+build/
+dist/
+
+# OS Files
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# IDE/Editor
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# Logs & Debug
+*.log
+debug/
+logs/
+
+# Temporary Files
+*.tmp
+temp/
+.temp/
+
+# Node (if using for tooling)
+node_modules/
+package-lock.json
+
+# Personal Notes
+notes.txt
+TODO.md
+scratch/
