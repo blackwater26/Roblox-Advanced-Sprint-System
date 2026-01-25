@@ -158,17 +158,30 @@ Please include a brief description of your project when contacting.
 
 ---
 
-# 🗺️ Road Map
+# Roadmap 🗺️
 
-v1.0.0 – Initial Release ✅
 
-v1.1.0 – UI Scalability Update 🚧
+### Released ✅
+
+v1.0.0 – Initial Release
+
+### In Progress 🚧
+
+v1.1.0 – UI Scalability Update |
 Adopting React as the primary UI library
 
-v1.1.5 – Audio Feedback Update 🔜
+### Upcoming 🔜
+
+v1.1.5 – Audio Feedback Update |
 Listenable audio events & customization
 
-v1.2.0 – Visual Effects Update 🔜
+v1.2.0 – Visual Effects Update |
 Configurable VFX & event-driven triggers
+
+v1.4.0 – UI Customization Update |
+Expanding options of UI Customization
+
+v1.5.0 – Mobil Support Update |
+Integrating Mobil Support to our System
 
 ---
