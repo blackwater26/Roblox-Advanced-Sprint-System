@@ -179,13 +179,16 @@ Listenable audio events & customization
 v1.2.0 – Visual Effects Update |
 Event-driven triggers for VFX
 
-v1.4.0 – UI Customization Update |
+v1.2.5 – Flexible Animation Integration |
+Customizable Animation Support
+
+v1.4.5 – UI Customization Update |
 Expanding options of UI Customization
 
-v1.5.0 – Mobile Support Update |
+v1.5.5 – Mobile Support Update |
 Integrating Mobil Support to our System
 
-v1.6.0 – Audio & VFX Update |
+v1.6.5 – Audio & VFX Update |
 Expanding Customization for Audio & VFX
 
 ---
