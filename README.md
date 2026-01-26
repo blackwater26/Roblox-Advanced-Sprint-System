@@ -169,12 +169,10 @@ v1.1.0 – UI Scalability Update
 
 ### In Progress 🚧
 
-Break for a day!
-
-### Upcoming 🔜
-
 v1.1.5 – Audio Feedback Update |
 Listenable audio events & customization
+
+### Upcoming 🔜
 
 v1.2.0 – Visual Effects Update |
 Event-driven triggers for VFX
@@ -190,6 +188,12 @@ Integrating Mobil Support to our System
 
 v1.6.5 – Audio & VFX Update |
 Expanding Customization for Audio & VFX
+
+v1.9.5 – Universal AI Support Update |
+Decoupled movement logic for NPC integration
+
+v2.0.0 – The Final Dawn |
+Small improvements and Detailed Document Update
 
 ---
 
