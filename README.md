@@ -172,13 +172,13 @@ v1.1.0 – UI Scalability Update
 v1.1.5 – Audio Feedback Update |
 Listenable audio events & customization
 
-### Upcoming 🔜
-
 v1.2.0 – Visual Effects Update |
 Event-driven triggers for VFX
 
 v1.2.5 – Flexible Animation Integration |
 Customizable Animation Support
+
+### Upcoming 🔜
 
 v1.4.5 – UI Customization Update |
 Expanding options of UI Customization
